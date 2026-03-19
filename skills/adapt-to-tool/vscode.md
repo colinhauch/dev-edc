@@ -1,41 +1,23 @@
 # Adapting dev-edc skills to VS Code Copilot
 
-VS Code Copilot reads persistent instructions from `.github/copilot-instructions.md` or a repo-level `AGENTS.md`. Both are plain Markdown — no frontmatter or special format required.
+VS Code Copilot natively supports the same skill format as Claude Code — `SKILL.md` files with YAML frontmatter in a `skills/` subfolder. Minimal adaptation is required.
 
-## Target formats
+## Target format
 
-### Option A — `.github/copilot-instructions.md` (recommended)
-
-```
-.github/
-└── copilot-instructions.md
-```
-
-This file is automatically loaded by Copilot Chat as persistent context for all interactions in the workspace.
-
-### Option B — `AGENTS.md` (repo-level)
+VS Code Copilot reads skills from these locations automatically:
 
 ```
-AGENTS.md
+.github/skills/{skill-name}/SKILL.md
+.claude/skills/{skill-name}/SKILL.md   ← already works if fetched with degit
+.agents/skills/{skill-name}/SKILL.md
 ```
 
-## How to adapt
+Additional locations can be configured via the `chat.agentSkillsLocations` VS Code setting.
 
-### For `.github/copilot-instructions.md`
+## How to use
 
-1. **Open or create** `.github/copilot-instructions.md`
-2. **Add a section heading** (e.g., `## {Skill Name}`) for the skill
-3. **Paste the skill body** below the heading
-4. **Remove** the YAML frontmatter block and the dev-edc repo reference line — plain Markdown only
-5. If the skill references companion files, inline the relevant content directly (Copilot does not follow file references)
+Since dev-edc skills are already in the correct format, no conversion is needed if you fetched them into `.claude/skills/` (the default degit path):
 
-### For `AGENTS.md`
-
-Same steps as above — add a heading and paste the skill body.
-
-## Notes
-
-- VS Code Copilot does not support multi-file skill structures; all instructions must be in a single file
-- There is no trigger/description mechanism — Copilot applies instructions from `copilot-instructions.md` to every chat session in the workspace
-- Keep instructions concise; the entire file is injected into every prompt
-- If adapting multiple skills, combine them into one file with clear section headings
+```sh
+npx degit colinhauch/dev-edc/skills/{skill-name} .claude/skills/{skill-name}
+```
