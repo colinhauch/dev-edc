@@ -9,3 +9,20 @@ A personal developer EDC (Every Day Carry). The toolkit can contain anything use
 ## Maintenance responsibilities
 
 When adding or removing items, always update: `table-of-contents.md`. Check to see if the `README.md` also needs to be updated.
+
+## Attribution
+
+Third-party items must include an `ATTRIBUTION.md` in their folder:
+
+```markdown
+# Attribution
+
+**Original author:** <name>
+**Source:** <url>
+**Fetched via:** `npx degit ...`
+**License:** [Type](./LICENSE.txt) ← omit if none
+
+## Modifications
+
+None — unmodified as of <date>. ← update this when editing
+```
