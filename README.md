@@ -43,4 +43,4 @@ Items are formatted for Claude Code by default (YAML frontmatter + `SKILL.md`). 
 
 ## Available Resources
 
-See [table-of-contents.md](./table-of-contents.md) for the full annotated list. I recomend 
+See [table-of-contents.md](./table-of-contents.md) for the full annotated list. 
