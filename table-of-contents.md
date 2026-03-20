@@ -15,6 +15,8 @@ dev-edc/
     │   └── SKILL.md                   # Create commits following Conventional Commits spec
     ├── frontend-design/
     │   └── SKILL.md                   # Anthropic's skill for building production-grade frontend interfaces
+    ├── grill-me/
+    │   └── SKILL.md                   # Matt Pocock's skill for Socratic learning via grilling
     ├── skill-creator/
     │   └── SKILL.md                   # Anthropic's skill for creating new Claude Code skills
     ├── sync-edc/
