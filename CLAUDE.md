@@ -8,20 +8,7 @@ A personal developer EDC (Every Day Carry). The toolkit can contain anything use
 
 ## Attribution
 
-Third-party items must include an `ATTRIBUTION.md` in their folder:
-
-```markdown
-# Attribution
-
-**Original author:** <name>
-**Source:** <url>
-**Fetched via:** `npx degit ...`
-**License:** [Type](./LICENSE.txt) ← omit if none
-
-## Modifications
-
-None — unmodified as of <date>. ← update this when editing
-```
+Third-party items must include an `ATTRIBUTION.md` in their folder. Follow repo patterns when creating or editing these files.
 
 ## Maintenance responsibilities
 
